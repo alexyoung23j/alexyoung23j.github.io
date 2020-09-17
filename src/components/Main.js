@@ -6,7 +6,16 @@ import picture from "./Good.jpg"
 import { motion, useAnimation, useViewportScroll, AnimatePresence } from "framer-motion"
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
-
+import Projects from "./Projects"
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link, useRouteMatch,
+    useParams, 
+    useHistory
+  } from "react-router-dom";
+  
 
 
 
@@ -29,12 +38,15 @@ export default function Main() {
 
     const [curPage, setCurPage] = useState()
 
+    let match = useRouteMatch();
+    let history = useHistory()
+
 
 
     const scrollToRef = (ref) => ref.current.scrollIntoView({behavior: "smooth"})
 
     useEffect(() => {
-        //projectRef.current.scrollIntoView()
+        projectRef.current.scrollIntoView()
     }, [])
 
     function checkCurPage(page) {
@@ -52,8 +64,8 @@ export default function Main() {
     }
 
     function clearAnims2() {
-        projectsFieldAnim.set({scale: 1, translateX: 200})
-        aboutFieldAnim.set({translateX: 200})
+        projectsFieldAnim.set({scale: 1, translateX: 100})
+        aboutFieldAnim.set({translateX: 100})
 
     }
 
@@ -241,10 +253,10 @@ export default function Main() {
                                 </div>
                                 
                                 <div style={{display: "flex", flexDirection: "row", marginTop:"3%", flexGrow: 1}}>
-                                    <div style={{fontFamily: "Avenir-light", fontStyle: "italic", fontSize: 30, color: "#00004c", marginRight: 8}}>
+                                    <div style={{fontFamily: "Avenir-light", fontStyle: "bold", fontSize: 30, color: "#00004c", marginRight: 8}}>
                                         Math / Computer Science Student @   
                                     </div>
-                                    <a href="https://math.ucsd.edu/" target="_blank" style={{fontFamily: "Avenir-light", fontStyle: "italic", fontSize: 30, color: "#00004c",}}>
+                                    <a href="https://math.ucsd.edu/" target="_blank" style={{fontFamily: "Avenir-light", fontStyle: "bold", fontSize: 30, color: "#00004c",}}>
                                         UC San Diego 
                                     </a>
                                 </div>
@@ -252,6 +264,14 @@ export default function Main() {
                                 <div style={{fontFamily: "Avenir-light", fontStyle: "italic", marginTop: "3%", fontSize: 25, color: "#00004c"}}>
                                     I am passionate about using technology to build valuable services. 
                                 </div>
+                               {/*  <motion.div
+                                onTap={() => history.push("/test")}
+                                whileHover={{scale: 1.2}}
+                                style={{width: 100, backgroundColor: "red", cursor: "pointer"}}
+                                >
+                                    yo
+                                </motion.div> */}
+                                
                                 
 
                             </div>
@@ -262,18 +282,15 @@ export default function Main() {
                         <ArrowBackIosIcon style={{marginLeft: "3%", color: "#b2b2ff", fontSize: 30}}/>
                         <motion.div 
                         animate={projectsFieldAnim}
-                        style={{backgroundColor: "#e5e5ff50", borderRadius:40, width: "80%",  marginLeft:"1%", display: "flex", height: "85%", alignItems: "flex-start"}}>
-                    
-                            <div style={{ display: "flex", alignItems: "flex-start", marginLeft: "5%", flexDirection: "column", }}>
-                                <h1 style={{fontFamily: "Avenir-light", fontSize: 80, color: "#00004c"}}>
+                        style={{backgroundColor: "#e5e5ff50", borderRadius:40, width: "90%",  marginLeft:"1%", display: "flex", height: "85%", alignItems: "flex-start", flexDirection: "column"}}>
+                            <h1 style={{fontFamily: "Avenir-light", fontSize: 80, color: "#00004c", marginLeft: "5%"}}>
                                 Projects                                
-                                </h1>
-                                <motion.div
-                                    style={{}}
-                                >
-
-                                </motion.div>
+                            </h1>
+                                
+                            <div style={{ width: "100%", height: "70%", display: "flex", marginTop: "-11%",  justifyContent: "center", alignItems: "center",}}>
+                                <Projects />
                             </div>
+                                
                         </motion.div>
                         
                     </div>
