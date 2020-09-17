@@ -6,7 +6,9 @@ import picture from "./Good.jpg"
 import { motion, useAnimation, useViewportScroll, AnimatePresence } from "framer-motion"
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import HomeIcon from '@material-ui/icons/Home';
 import Projects from "./Projects"
+import Podcast from "./Podcast"
 import {
     BrowserRouter as Router,
     Switch,
@@ -28,6 +30,8 @@ export default function Main() {
     const contactAnim = useAnimation()
     const aboutFieldAnim = useAnimation()
     const projectsFieldAnim = useAnimation()
+    const podcastFieldAnim = useAnimation()
+    const contactFieldAnim = useAnimation()
 
 
     const projectRef = useRef()
@@ -45,9 +49,7 @@ export default function Main() {
 
     const scrollToRef = (ref) => ref.current.scrollIntoView({behavior: "smooth"})
 
-    useEffect(() => {
-        projectRef.current.scrollIntoView()
-    }, [])
+    
 
     function checkCurPage(page) {
         if (page != curPage) {
@@ -60,12 +62,20 @@ export default function Main() {
                 projectsFieldAnim.set({scale: 1, translateX: 0, transition: {duration: 3000, }})
                 
             }
+            if (page == "podcast") {
+                podcastFieldAnim.set({scale: 1, translateX: 0, transition: {duration: 3000, }})
+            }
+            if (page == "contact") {
+                contactFieldAnim.set({scale: 1, translateX: 0, transition: {duration: 3000, }})
+            }
         }
     }
 
     function clearAnims2() {
-        projectsFieldAnim.set({scale: 1, translateX: 100})
-        aboutFieldAnim.set({translateX: 100})
+        projectsFieldAnim.set({scale: 1, translateX: 50})
+        aboutFieldAnim.set({translateX: 50})
+        podcastFieldAnim.set({translateX: 50})
+        contactFieldAnim.set({translateX: 50})
 
     }
 
@@ -86,20 +96,23 @@ export default function Main() {
             checkCurPage("about")
             
         } 
-        if (projectPos >= 150 && projectPos <= window.innerHeight+450) {
+        if (projectPos >= 450 && projectPos <= window.innerHeight+450) {
             clearAnims()
             projectsAnim.set({scale: 1.05, color: "#b2b2ff"})
             checkCurPage("projects")
 
         } 
       
-         if (podcastPos >= 150 && podcastPos <= window.innerHeight+150) {
+         if (podcastPos >= 450 && podcastPos <= window.innerHeight+450) {
             clearAnims()
             podcastAnim.set({scale: 1.05, color: "#b2b2ff"})
+            checkCurPage("podcast")
+
         }  
-         if (contactPos >= 150 && contactPos <= window.innerHeight+150) {
+         if (contactPos >= 150 && contactPos <= window.innerHeight+450) {
             clearAnims()
             contactAnim.set({scale: 1.05, color: "#b2b2ff"})
+            checkCurPage("contact")
         }  
         
 
@@ -204,6 +217,15 @@ export default function Main() {
     }
     return (
         <div style={{display: "flex",  height: "100vh"}}>
+            <motion.div
+                whileHover={{scale: 1.1}}
+                onTap={() => scrollToRef(aboutRef)}
+                style={{position: "absolute", x: "97vw", y:"4vh"}}
+            >
+                <HomeIcon style={{fontSize: 35, color: "#00004c"}}/>
+
+            </motion.div>
+            
             <div style={{display: "flex", flex: 1,  backgroundColor: "#e5e5ff", flexDirection: "column"}}>
                 
                 <motion.div 
@@ -223,13 +245,14 @@ export default function Main() {
             <div style={{display: "flex", flex: 4,backgroundColor: "#ccccff", overflow: "hidden", flexDirection: "column", }}>
                 <div onScroll={() => scrollEvent()} style={{overflowY: "scroll", width: "102%"}}>
                     <div ref={aboutRef} style={{display: "flex",  height: "100vh", justifyContent:"flex-start", alignItems: "center",}}>
-                        <ArrowBackIosIcon style={{marginLeft: "3%", color: "#b2b2ff", fontSize: 30}}/>
+                        
+                        <ArrowBackIosIcon style={{marginLeft: "1%", color: "#b2b2ff", fontSize: 30}}/>
                         <motion.div 
-                        animate={aboutFieldAnim}
-                        style={{backgroundColor: "#e5e5ff50", borderRadius:40, width: "80%",  marginLeft:"1%", display: "flex", height: "65%", alignItems: "center"}}>
+                            animate={aboutFieldAnim}
+                            style={{backgroundColor: "#e5e5ff50", borderRadius:40, width: "88%",  marginLeft:"0%", display: "flex", height: "65%", alignItems: "center"}}>
                     
                             <div style={{ display: "flex", alignItems: "flex-start", marginLeft: "5%", flexDirection: "column", marginTop: "-8%", }}>
-                                <h1 style={{fontFamily: "Avenir-light", fontSize: 80, color: "#00004c"}}>
+                                <h1 style={{fontFamily: "Avenir-light", fontSize: 100, color: "#00004c"}}>
                                     Alexander J. Young
                                 </h1>
                                 <div style={{display: "flex", flexDirection: "row", alignItems: "center", marginTop: "-7%", }}>
@@ -237,12 +260,14 @@ export default function Main() {
                                         style={{display: "flex",}}
                                         whileHover={{ cursor: "pointer", color: "#b2b2ff"}}
                                         onTap={() => openLink("github")}
+                                        initial={{color: "#211F1F"}}
                                         >
                                         <GitHubIcon style={{fontSize: 30}}/>
                                     </motion.div>
                                     <motion.div
                                         style={{display: "flex",marginLeft: "5%"}}
                                         whileHover={{cursor: "pointer", color: "#b2b2ff"}}
+                                        initial={{color: "#0077B5"}}
                                         onTap={() => openLink("linkedIn")}
                                         >
                                         <LinkedInIcon style={{fontSize: 30}}/>
@@ -261,34 +286,49 @@ export default function Main() {
                                     </a>
                                 </div>
                                 
-                                <div style={{fontFamily: "Avenir-light", fontStyle: "italic", marginTop: "3%", fontSize: 25, color: "#00004c"}}>
+                                <div style={{fontFamily: "Avenir-Medium",marginTop: "3%", fontSize: 25, color: "#00004c"}}>
                                     I am passionate about using technology to build valuable services. 
                                 </div>
-                               {/*  <motion.div
-                                onTap={() => history.push("/test")}
-                                whileHover={{scale: 1.2}}
-                                style={{width: 100, backgroundColor: "red", cursor: "pointer"}}
-                                >
-                                    yo
-                                </motion.div> */}
-                                
-                                
 
                             </div>
                         </motion.div>
                         
                     </div>
                     <div ref={projectRef} style={{display: "flex",  height: "100vh", justifyContent:"flex-start", alignItems: "center",}}>
-                        <ArrowBackIosIcon style={{marginLeft: "3%", color: "#b2b2ff", fontSize: 30}}/>
+                        <ArrowBackIosIcon style={{marginLeft: "1%", color: "#b2b2ff", fontSize: 30}}/>
                         <motion.div 
                         animate={projectsFieldAnim}
-                        style={{backgroundColor: "#e5e5ff50", borderRadius:40, width: "90%",  marginLeft:"1%", display: "flex", height: "85%", alignItems: "flex-start", flexDirection: "column"}}>
-                            <h1 style={{fontFamily: "Avenir-light", fontSize: 80, color: "#00004c", marginLeft: "5%"}}>
+                        style={{backgroundColor: "#e5e5ff50", borderRadius:40, width: "88%",  marginLeft:"0%", display: "flex", height: "85%", alignItems: "flex-start", flexDirection: "column"}}>
+                            <h1 style={{fontFamily: "Avenir-light", fontSize: 80, color: "#00004c", marginLeft: "5%", marginBottom: "1%"}}>
                                 Projects                                
                             </h1>
+
+                            <div style={{fontFamily: "Avenir-light", fontSize: 25, color: "#00004c", marginLeft: "5%", width: "65vw", marginBottom: "2%"}}>
+                                Here are a few of the things I've built using technologies such as React.js, Firebase, Node.js, and more. I am always working on something new, so check back for updates!                               
+                            </div>
                                 
-                            <div style={{ width: "100%", height: "70%", display: "flex", marginTop: "-11%",  justifyContent: "center", alignItems: "center",}}>
+                            <div style={{ width: "100%", height: "70%", display: "flex", marginTop: "-11%",  justifyContent: "center", alignItems: "center", }}>
                                 <Projects />
+                            </div>
+                                
+                        </motion.div>
+                        
+                    </div>
+                    <div ref={podcastRef} style={{display: "flex",  height: "100vh", justifyContent:"flex-start", alignItems: "center",}}>
+                        <ArrowBackIosIcon style={{marginLeft: "1%", color: "#b2b2ff", fontSize: 30}}/>
+                        <motion.div 
+                        animate={podcastFieldAnim}
+                        style={{backgroundColor: "#e5e5ff50", borderRadius:40, width: "88%",  marginLeft:"0%", display: "flex", height: "85%", alignItems: "flex-start", flexDirection: "column"}}>
+                            <h1 style={{fontFamily: "Avenir-light", fontSize: 80, color: "#00004c", marginLeft: "5%", marginBottom: "1%"}}>
+                                Podcast                                
+                            </h1>
+
+                            <div style={{fontFamily: "Avenir-light", fontSize: 25, color: "#00004c", marginLeft: "5%", width: "65vw", marginBottom: "2%"}}>
+                                Just for fun, I do a podcast with my friend called Topical Storm. Each episode, we explore interesting and novel ideas in philosophy, psychology, or science. Episodes are only 30-45 minutes long, perfect for a morning commute.                             
+                            </div>
+                                
+                            <div style={{ width: "100%", height: "70%", display: "flex", marginTop: "-11%",  justifyContent: "center", alignItems: "center", }}>
+                                <Podcast />
                             </div>
                                 
                         </motion.div>
@@ -296,11 +336,34 @@ export default function Main() {
                     </div>
                     
                     
-                    <div ref={podcastRef} style={{display: "flex", height: "100vh", width: "100vh"}}>
-                        podcast
-                    </div>
-                    <div ref={contactRef} style={{display: "flex",  height: "100vh", width: "100vh"}}>
-                        contact
+            
+                    <div ref={contactRef} style={{display: "flex",  height: "100vh", justifyContent:"flex-start", alignItems: "center",}}>
+                        
+                        <ArrowBackIosIcon style={{marginLeft: "1%", color: "#b2b2ff", fontSize: 30}}/>
+                        <motion.div 
+                            animate={contactFieldAnim}
+                            style={{backgroundColor: "#e5e5ff50", borderRadius:40, width: "60%",  marginLeft:"0%", display: "flex", height: "65%", alignItems: "center"}}>
+                    
+                            <div style={{ display: "flex", alignItems: "flex-start", marginLeft: "5%", flexDirection: "column", marginTop: "-8%", }}>
+                                <h1 style={{fontFamily: "Avenir-light", fontSize: 80, color: "#00004c", marginBottom: "1%"}}>
+                                    Contact                                
+                                </h1>
+                            
+                                            
+                                <div style={{display: "flex", flexDirection: "row", marginTop:"1%", flexGrow: 1}}>
+                                    <div style={{fontFamily: "Avenir-light", fontStyle: "bold", fontSize: 30, color: "#00004c", marginRight: 8}}>
+                                        You can reach me @ ajy034@ucsd.edu or through LinkedIn. 
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div style={{fontFamily: "Avenir-Medium",marginTop: "5%", fontSize: 25, color: "#00004c"}}>
+                                    Thanks!
+                                </div>
+
+                            </div>
+                        </motion.div>
+                        
                     </div>
                 </div>
             </div>
