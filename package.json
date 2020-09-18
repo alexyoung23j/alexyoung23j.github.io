@@ -1,8 +1,8 @@
 {
-  "homepage": "http://alexyoung23j.github.io/alexyoung23j.github.io",
   "name": "personalsite",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://alexyoung23j.github.io",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
@@ -22,12 +22,12 @@
     "react-scroll-section": "^2.1.0"
   },
   "scripts": {
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "yarn build", 
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"

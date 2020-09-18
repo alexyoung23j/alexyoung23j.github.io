@@ -20,6 +20,10 @@ import {
   } from "react-router-dom";
 
 
+      /* "predeploy": "yarn build",
+    "deploy": "gh-pages -d build" */
+
+    // "homepage": "http://alexyoung23j.github.io/alexyoung23j.github.io",
 
 
 export default function Projects() {
