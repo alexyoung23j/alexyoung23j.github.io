@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/alexyoung23j.github.io/static/css/main.5f361e03.chunk.css",
-    "main.js": "/alexyoung23j.github.io/static/js/main.4600f4e6.chunk.js",
-    "main.js.map": "/alexyoung23j.github.io/static/js/main.4600f4e6.chunk.js.map",
-    "runtime-main.js": "/alexyoung23j.github.io/static/js/runtime-main.12127be7.js",
-    "runtime-main.js.map": "/alexyoung23j.github.io/static/js/runtime-main.12127be7.js.map",
-    "static/js/2.8e41c90a.chunk.js": "/alexyoung23j.github.io/static/js/2.8e41c90a.chunk.js",
-    "static/js/2.8e41c90a.chunk.js.map": "/alexyoung23j.github.io/static/js/2.8e41c90a.chunk.js.map",
-    "index.html": "/alexyoung23j.github.io/index.html",
-    "precache-manifest.ddd674cd3b194b63fa34b2c5c0357208.js": "/alexyoung23j.github.io/precache-manifest.ddd674cd3b194b63fa34b2c5c0357208.js",
-    "service-worker.js": "/alexyoung23j.github.io/service-worker.js",
-    "static/css/main.5f361e03.chunk.css.map": "/alexyoung23j.github.io/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.8e41c90a.chunk.js.LICENSE.txt": "/alexyoung23j.github.io/static/js/2.8e41c90a.chunk.js.LICENSE.txt",
-    "static/media/CropLogo.png": "/alexyoung23j.github.io/static/media/CropLogo.ed6b64c9.png",
-    "static/media/Good.jpg": "/alexyoung23j.github.io/static/media/Good.b8805d04.jpg",
-    "static/media/SmartShopLogo.jpg": "/alexyoung23j.github.io/static/media/SmartShopLogo.8cbe1064.jpg",
-    "static/media/groupRubik.png": "/alexyoung23j.github.io/static/media/groupRubik.17434cbe.png",
-    "static/media/logo.svg": "/alexyoung23j.github.io/static/media/logo.5d5d9eef.svg",
-    "static/media/podcastLogo.jpg": "/alexyoung23j.github.io/static/media/podcastLogo.52850f0d.jpg",
-    "static/media/spotify.png": "/alexyoung23j.github.io/static/media/spotify.2b37ba76.png"
+    "main.css": "/static/css/main.5f361e03.chunk.css",
+    "main.js": "/static/js/main.5baefe3b.chunk.js",
+    "main.js.map": "/static/js/main.5baefe3b.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.12f2c6c9.js",
+    "runtime-main.js.map": "/static/js/runtime-main.12f2c6c9.js.map",
+    "static/js/2.8e41c90a.chunk.js": "/static/js/2.8e41c90a.chunk.js",
+    "static/js/2.8e41c90a.chunk.js.map": "/static/js/2.8e41c90a.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.0f18b02cf98f1ed6b30d75e98cc9ea41.js": "/precache-manifest.0f18b02cf98f1ed6b30d75e98cc9ea41.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.8e41c90a.chunk.js.LICENSE.txt": "/static/js/2.8e41c90a.chunk.js.LICENSE.txt",
+    "static/media/CropLogo.png": "/static/media/CropLogo.ed6b64c9.png",
+    "static/media/Good.jpg": "/static/media/Good.b8805d04.jpg",
+    "static/media/SmartShopLogo.jpg": "/static/media/SmartShopLogo.8cbe1064.jpg",
+    "static/media/groupRubik.png": "/static/media/groupRubik.17434cbe.png",
+    "static/media/logo.svg": "/static/media/logo.5d5d9eef.svg",
+    "static/media/podcastLogo.jpg": "/static/media/podcastLogo.52850f0d.jpg",
+    "static/media/spotify.png": "/static/media/spotify.2b37ba76.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.12127be7.js",
+    "static/js/runtime-main.12f2c6c9.js",
     "static/js/2.8e41c90a.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.4600f4e6.chunk.js"
+    "static/js/main.5baefe3b.chunk.js"
   ]
 }
