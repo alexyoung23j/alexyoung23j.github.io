@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.5f361e03.chunk.css",
-    "main.js": "/static/js/main.80172fd0.chunk.js",
-    "main.js.map": "/static/js/main.80172fd0.chunk.js.map",
+    "main.js": "/static/js/main.b1a6a2b3.chunk.js",
+    "main.js.map": "/static/js/main.b1a6a2b3.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.12f2c6c9.js",
     "runtime-main.js.map": "/static/js/runtime-main.12f2c6c9.js.map",
-    "static/js/2.8e41c90a.chunk.js": "/static/js/2.8e41c90a.chunk.js",
-    "static/js/2.8e41c90a.chunk.js.map": "/static/js/2.8e41c90a.chunk.js.map",
+    "static/js/2.38af78d3.chunk.js": "/static/js/2.38af78d3.chunk.js",
+    "static/js/2.38af78d3.chunk.js.map": "/static/js/2.38af78d3.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.2e3b3460181213df76f15f48c6352094.js": "/precache-manifest.2e3b3460181213df76f15f48c6352094.js",
+    "precache-manifest.32b50118646abb13d25fc9ff91b8d52b.js": "/precache-manifest.32b50118646abb13d25fc9ff91b8d52b.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.5f361e03.chunk.css.map": "/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.8e41c90a.chunk.js.LICENSE.txt": "/static/js/2.8e41c90a.chunk.js.LICENSE.txt",
+    "static/js/2.38af78d3.chunk.js.LICENSE.txt": "/static/js/2.38af78d3.chunk.js.LICENSE.txt",
     "static/media/CropLogo.png": "/static/media/CropLogo.ed6b64c9.png",
     "static/media/Good.jpg": "/static/media/Good.b8805d04.jpg",
     "static/media/SmartShopLogo.jpg": "/static/media/SmartShopLogo.8cbe1064.jpg",
@@ -22,8 +22,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.12f2c6c9.js",
-    "static/js/2.8e41c90a.chunk.js",
+    "static/js/2.38af78d3.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.80172fd0.chunk.js"
+    "static/js/main.b1a6a2b3.chunk.js"
   ]
 }
