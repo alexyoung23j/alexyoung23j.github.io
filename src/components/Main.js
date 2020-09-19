@@ -303,11 +303,11 @@ export default function Main() {
                                 Projects                                
                             </h1>
 
-                            <div style={{fontFamily: "Avenir-light", fontSize: 25, color: "#00004c", marginLeft: "5%", width: "65vw", marginBottom: "2%"}}>
+                            <div style={{fontFamily: "Avenir-light", fontSize: 25, color: "#00004c", marginLeft: "5%", marginTop: "-2%", width: "65vw", marginBottom: "2%"}}>
                                 Here are a few of the things I've built using technologies such as React.js, Firebase, Node.js, and more. I am always working on something new, so check back for updates!                               
                             </div>
                                 
-                            <div style={{ width: "100%", height: "70%", display: "flex", marginTop: "-11%",  justifyContent: "center", alignItems: "center", }}>
+                            <div style={{ width: "100%", height: "70%", display: "flex", marginTop: "-13%",  justifyContent: "center", alignItems: "center", }}>
                                 <Projects />
                             </div>
                                 
@@ -323,11 +323,11 @@ export default function Main() {
                                 Podcast                                
                             </h1>
 
-                            <div style={{fontFamily: "Avenir-light", fontSize: 25, color: "#00004c", marginLeft: "5%", width: "65vw", marginBottom: "2%"}}>
+                            <div style={{fontFamily: "Avenir-light", fontSize: 25, color: "#00004c", marginLeft: "5%", marginTop: "-2%",width: "65vw", marginBottom: "2%"}}>
                                 Just for fun, I do a podcast with my friend called Topical Storm. Each episode, we explore interesting and novel ideas in philosophy, psychology, or science. Episodes are only 30-45 minutes long, perfect for a morning commute.                             
                             </div>
                                 
-                            <div style={{ width: "100%", height: "70%", display: "flex", marginTop: "-11%",  justifyContent: "center", alignItems: "center", }}>
+                            <div style={{ width: "100%", height: "70%", display: "flex", marginTop: "-13%",  justifyContent: "center", alignItems: "center", }}>
                                 <Podcast />
                             </div>
                                 
