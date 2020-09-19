@@ -216,17 +216,17 @@ export default function Main() {
         )
     }
     return (
-        <div style={{display: "flex",  height: "100vh"}}>
+        <div style={{display: "flex", height: "100vh", marginBottom: "-2%"}}>
             <motion.div
                 whileHover={{scale: 1.1}}
                 onTap={() => scrollToRef(aboutRef)}
-                style={{position: "absolute", x: "97vw", y:"4vh"}}
+                style={{position: "absolute", x: "97vw", y:"3vh", width: "1vw",}}
             >
-                <HomeIcon style={{fontSize: 35, color: "#00004c"}}/>
+                <HomeIcon style={{fontSize: 30, color: "#00004c"}}/>
 
             </motion.div>
             
-            <div style={{display: "flex", flex: 1,  backgroundColor: "#e5e5ff", flexDirection: "column"}}>
+            <div style={{display: "flex", flex: 1, backgroundColor: "#e5e5ff", flexDirection: "column"}}>
                 
                 <motion.div 
                 whileHover={{scale: 1.02}}
