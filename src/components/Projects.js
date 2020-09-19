@@ -154,7 +154,7 @@ export default function Projects() {
                     <motion.div
                         initial={{opacity: 1}}
                         exit={{opacity: 1}}
-                        style={{display: "flex", textAlign: "center", zIndex: 2, position: "relative", fontFamily: "Avenir-Heavy",  width: "18vw", fontSize: 35, color: "#00004c", justifyContent: "center"}}
+                        style={{display: "flex", textAlign: "center", zIndex: 2, position: "relative", fontFamily: "Avenir-Heavy",  width: "20vw", fontSize: 35, color: "#00004c", justifyContent: "center"}}
                     >
                         Group Visualizer
                     </motion.div>
