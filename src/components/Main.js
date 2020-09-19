@@ -9,6 +9,8 @@ import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import HomeIcon from '@material-ui/icons/Home';
 import Projects from "./Projects"
 import Podcast from "./Podcast"
+import { Icon, InlineIcon } from '@iconify/react';
+import bxlReact from '@iconify/icons-bx/bxl-react';
 import {
     BrowserRouter as Router,
     Switch,
@@ -17,8 +19,8 @@ import {
     useParams, 
     useHistory
   } from "react-router-dom";
-  
 
+  // npm install --save-dev @iconify/react @iconify/icons-bx
 
 
 export default function Main() {
@@ -210,8 +212,12 @@ export default function Main() {
                         <LinkedInIcon style={{fontSize: 30}}/>
                     </motion.div>
               
-                   
-               </div>
+                </div>
+                <div style={{display: "flex", flex: 1, textAlign: "center", flexDirection: "row", marginTop: "20%", fontStyle: "italic", fontFamily: "Avenir-light", fontSize: 13, color: "#00004", alignItems: "center", justifyContent: "center"}}>
+                    Built with React
+                    <Icon style={{marginLeft: ".5vw", }} icon={bxlReact} width="2vw" color="#00004c"/>
+              
+                </div>
             </div>
         )
     }
