@@ -303,7 +303,7 @@ export default function Main() {
                                 Projects                                
                             </h1>
 
-                            <div style={{fontFamily: "Avenir-light", fontSize: 25, color: "#00004c", marginLeft: "5%", marginTop: "-2%", width: "65vw", marginBottom: "2%"}}>
+                            <div style={{fontFamily: "Avenir-light", fontSize: 24, color: "#00004c", marginLeft: "5%", marginTop: "-1%", width: "65vw", marginBottom: "2%"}}>
                                 Here are a few of the things I've built using technologies such as React.js, Firebase, Node.js, and more. I am always working on something new, so check back for updates!                               
                             </div>
                                 
@@ -323,7 +323,7 @@ export default function Main() {
                                 Podcast                                
                             </h1>
 
-                            <div style={{fontFamily: "Avenir-light", fontSize: 25, color: "#00004c", marginLeft: "5%", marginTop: "-2%",width: "65vw", marginBottom: "2%"}}>
+                            <div style={{fontFamily: "Avenir-light", fontSize: 24, color: "#00004c", marginLeft: "5%", marginTop: "-2%",width: "65vw", marginBottom: "2%"}}>
                                 Just for fun, I do a podcast with my friend called Topical Storm. Each episode, we explore interesting and novel ideas in philosophy, psychology, or science. Episodes are only 30-45 minutes long, perfect for a morning commute.                             
                             </div>
                                 
@@ -342,7 +342,7 @@ export default function Main() {
                         <ArrowBackIosIcon style={{marginLeft: "1%", color: "#b2b2ff", fontSize: 30}}/>
                         <motion.div 
                             animate={contactFieldAnim}
-                            style={{backgroundColor: "#e5e5ff50", borderRadius:40, width: "60%",  marginLeft:"0%", display: "flex", height: "65%", alignItems: "center"}}>
+                            style={{backgroundColor: "#e5e5ff50", borderRadius:40, width: "70%",  marginLeft:"0%", display: "flex", height: "65%", alignItems: "center"}}>
                     
                             <div style={{ display: "flex", alignItems: "flex-start", marginLeft: "5%", flexDirection: "column", marginTop: "-8%", }}>
                                 <h1 style={{fontFamily: "Avenir-light", fontSize: 80, color: "#00004c", marginBottom: "1%"}}>
@@ -352,7 +352,7 @@ export default function Main() {
                                             
                                 <div style={{display: "flex", flexDirection: "row", marginTop:"1%", flexGrow: 1}}>
                                     <div style={{fontFamily: "Avenir-light", fontStyle: "bold", fontSize: 30, color: "#00004c", marginRight: 8}}>
-                                        You can reach me @ ajy034@ucsd.edu or through LinkedIn. 
+                                        You can reach me at ajy034@ucsd.edu or through LinkedIn. 
                                     </div>
                                     
                                 </div>
